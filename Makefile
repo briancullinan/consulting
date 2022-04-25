@@ -16,10 +16,8 @@ endef
 landing: copy-html embed-cc
 
 embed-cc:
-	$(call DO_EMBED_CC,build/index.html,index.css,index.js,index_matrix.jpg)
+	$(call DO_EMBED_CC,index.html,index.css,index.js,index_matrix.jpg)
 
 copy-html:
-	@if [ ! -d "./build" ]; \
-		then mkdir "./build";fi;
-	cp -r -f index.html build/index.html
+	cp -r -f assets/index.html index.html
 
